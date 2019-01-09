@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _MyAppState();
+  }
+}
+
+class _MyAppState extends State<MyApp>{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,14 +26,14 @@ class MyApp extends StatelessWidget {
                   child: Text('Add Product'),
                 ),
               ),
-       
+
               Card(
                 child: Column(
                   children: <Widget>[
                     Image.network(
                       'https://raw.githubusercontent.com/flutter/website/master/src/_includes/code/layout/lakes/images/lake.jpg',
                     ),
-                    Text('Mountain Paradise')
+                    Text('Food Paradise')
                   ],
                 ),
               ),
